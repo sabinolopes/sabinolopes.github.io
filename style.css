@@ -1,0 +1,36 @@
+body{
+    background-color: rgba(32, 32, 32, 1);
+    color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 1px black;
+}
+hr{
+    margin-left: -100px;
+    margin-right: -100px;
+}
+
+#topo{
+    text-align: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(17, 153, 199)
+}
+
+p{
+    text-align: justify;
+}
+#imagem{
+    border: 3px solid black;  
+    box-shadow: 2px 2px 2px black;
+}
+#imagem:hover{
+    border: 3px solid white;
+    box-shadow: 2px 2px 2px white;
+}
