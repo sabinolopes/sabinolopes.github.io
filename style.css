@@ -1,36 +1,72 @@
-body{
+header#topo {
+    text-align: center;
+    position: fixed;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 200px;
     background-color: rgba(32, 32, 32, 1);
     color: white;
-    margin-left: 100px;
-    margin-right: 100px;
-    font-family: 'Courier New', Courier, monospace;
-    text-shadow: 1px 1px 1px black;
-}
-hr{
-    margin-left: -100px;
-    margin-right: -100px;
 }
 
-#topo{
-    text-align: center;
+nav#menu {
+    display: block;
 }
 
-a{
+nav#menu ul {
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 150px;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: white;
+    box-shadow: 1px 1px 1px;
+    padding: 4px;
+    transition: background-color 1s;
+}
+
+nav#menu li:hover {
+    background-color: rgb(17, 153, 199);
+}
+
+nav#menu a:hover {
     color: white;
-    text-decoration: none;
-}
-a:hover{
-    color: rgb(17, 153, 199)
 }
 
-p{
+nav#menu h2 {
+    display: none;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
     text-align: justify;
 }
-#imagem{
-    border: 3px solid black;  
+
+div.container {
+    position: relative;
+    top: 200px;
+    left: 40px
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-style: italic;
+    transition: color 1s;
+}
+
+a:hover {
+    color: rgb(17, 153, 199);
+}
+
+#imagem {
+    border: 3px solid black;
     box-shadow: 2px 2px 2px black;
 }
-#imagem:hover{
-    border: 3px solid white;
-    box-shadow: 2px 2px 2px white;
+
+#imagem:hover {
+
 }
