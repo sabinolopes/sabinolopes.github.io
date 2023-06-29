@@ -20,6 +20,7 @@ body {
   color: white;
   position: fixed;
   width: 100%;
+  padding: 10px;
   top: 0;
   height: 100px;
 }
@@ -31,9 +32,8 @@ body {
 }
 
 #minha_foto {
-  box-shadow: 2px 2px 2px black;
-  border: 4px solid black;
-  margin: 110px 0 0 50px;
+  box-shadow: 3px 3px 3px black;
+  margin: 140px 0 0 50px;
   float: left;
   border-radius: 30%;
 }
@@ -43,14 +43,21 @@ figcaption {
   display: inline-block;
 }
 
+figcaption span {
+  text-shadow: 1px 1px black;
+}
+
 #tabela {
   float: right;
   margin: 200px; 
   width: 200px;
   background-color: rgb(96, 107, 101);
   color: white;
-  border: 3px solid black;
-  box-shadow: 3px 3px 3px;
+  box-shadow: 3px 3px 3px black;
+}
+
+#tabela span {
+  margin-right: 25px;
 }
 
 #tabela-imagem {
@@ -86,6 +93,10 @@ ol , ul {
   color: black;
 }
 
+#textos a:hover{
+  color: rgb(14, 148, 182);
+  }
+
 #titulo-listas {
   margin: 0 0 20px 50px;
 }
@@ -110,13 +121,12 @@ ol , ul {
 a {
   color: white;
   text-decoration: none;
-  font-style: italic;
 }
 
 a:hover {
-  color: blue;
+  color: rgb(14, 182, 103);
 }
 
 a:active {
-  color: white;
+  color: rgb(164, 197, 18);
 }
