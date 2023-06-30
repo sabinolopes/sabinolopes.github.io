@@ -20,7 +20,7 @@ header {
   font-family: 'Arvo', serif;
   text-transform: uppercase;
   font-size: 20px;
-  width: 40%;
+  width: 45%;
   margin: auto;
   padding: 15px;
 }
@@ -60,7 +60,7 @@ main {
 }
 
 article {
-  width: 40%;
+  width: 45%;
   margin: auto;
   background-color: rgb(204, 190, 154);
   padding: 15px;
@@ -71,11 +71,14 @@ article section {
 }
 
 table {
-  position: absolute;
-  width: 14%;
-  left: 11%;
   padding: 10px;
   border: 1px solid black;
+}
+
+#container-tabela {
+  position: absolute;
+  max-width: 17%;
+  left: 7%;
 }
 
 table th {
@@ -120,6 +123,11 @@ table figcaption {
   left: 25px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 section p {
   padding: 5px 0 0 0;
 }
@@ -140,9 +148,14 @@ aside {
   position: absolute;
   width: 25%;
   float: left;
-  left: 72%;
+  left: 74%;
   margin: auto;
   padding: 15px;
+}
+
+iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 aside a {
