@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#header-container {
+  padding: 30px;
+  border-bottom: 2px solid black;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+header {
+  font-family: 'Arvo', serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  width: 40%;
+  margin: auto;
+  padding: 15px;
+}
+
+nav {
+  width: 40%;
+  margin: auto;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+  border: 2px solid black;
+  border-radius: 100px;
+  padding: 5px 10px;
+}
+
+.fatos {
+  margin-left: 30px;
+}
+
+#ref {
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  display: flex;
+}
+
+article {
+  width: 40%;
+  margin: auto;
+  background-color: rgb(204, 190, 154);
+  padding: 15px;
+}
+
+article section {
+  padding: 10px;
+}
+
+table {
+  position: absolute;
+  width: 14%;
+  left: 11%;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+table th {
+  background-color: lightgray;
+  text-align: center;
+}
+
+#classificacao {
+  position: relative;
+  top: -20px;
+}
+
+table td {
+  text-align: left;
+  display: table;
+  float: left;
+  margin-right: 50px;
+}
+
+.celula {
+  margin-left: auto;
+  padding: 0 3px;
+}
+
+table span {
+  font-size: smaller;
+  position: relative;
+  top: -25px;
+}
+
+table img {
+  position: relative;
+  top: -20px;
+  left: 25px;
+}
+
+table figcaption {
+  text-align: center;
+  font-size: smaller;
+  position: relative;
+  top: -20px;
+  left: 25px;
+}
+
+section p {
+  padding: 5px 0 0 0;
+}
+
+section h2 {
+  font-size: 20pt;
+}
+
+section h3 {
+  font-size: 15pt;
+}
+
+section img {
+  padding: 20px 0 0 0; 
+}
+
+aside {
+  position: absolute;
+  width: 25%;
+  float: left;
+  left: 72%;
+  margin: auto;
+  padding: 15px;
+}
+
+aside a {
+  text-decoration: underline;
+}
+
+aside a:hover {
+  color: blue;
+}
+
+footer {
+  width: 100%;
+  position: static;
+  bottom: 0;
+  padding-top: 30px;
+  text-align: center;
+  background-color: white;
+}
