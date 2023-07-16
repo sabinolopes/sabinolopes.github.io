@@ -21,10 +21,14 @@ const createPixelsLine = () => {
 };
 createPixelsLine();
 
-const rows = document.querySelectorAll('.row');
+const getRows = () => {
+  const rows = document.querySelectorAll('.row');
+  return rows;
+};
 
 // Cria os pixels
 const fillPixelsLine = () => {
+  const rows = getRows();
   rows.forEach((rw) => {
     pixelsRows.forEach((n) => {
       const pixel = document.createElement('div');
@@ -127,18 +131,32 @@ window.onload = getColorsBack;
 const btnChangeBorder = document.querySelector('#generate-board');
 const inputNumber = document.querySelector('#board-size');
 
+const countLines = () => {
+  const inputValue = inputNumber.value;
+  for (let count = 1; count <= inputValue; count += 1) {
+    if (!pixelsRows.includes(count)) {
+      pixelsRows.push(count);
+    } else if (count > 50) {
+      break;
+    }
+  }
+};
+
 btnChangeBorder.addEventListener('click', (event) => {
   event.preventDefault();
+  const rows = getRows();
   rows.forEach((row) => {
     row.remove();
   });
   localStorage.removeItem('pixelBoard');
   const value = inputNumber.value;
-  for (let count = 1; count <= value; count += 1) {
-    if (!pixelsRows.includes(count)) {
-      pixelsRows.push(count);
-    }
+
+  if (value === '') {
+    window.alert('Board inválido!');
   }
+
+  countLines();
+
   inputNumber.value = '';
 
   createPixelsLine();
