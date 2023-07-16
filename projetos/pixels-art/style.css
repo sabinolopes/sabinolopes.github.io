@@ -42,8 +42,8 @@ section {
 }
 
 #pixel-board {
-  height: 210px;
-  width: 210px;
+  height: auto;
+  width: auto;
   margin: auto;
 }
 
