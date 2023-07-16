@@ -34,6 +34,11 @@ section {
   height: 30px;
   color: transparent;
   margin: 10px;
+  transition: all 600ms ease;
+
+    &:hover{
+      transform: translateY(-5px);
+    } 
   }
 
 #pixel-board {
