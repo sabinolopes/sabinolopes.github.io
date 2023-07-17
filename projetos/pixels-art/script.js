@@ -1,9 +1,26 @@
+const htmlElement = document.documentElement;
+const checkbox = document.querySelector('#dark-toogle');
 const colors = document.querySelectorAll('.color');
 const board = document.querySelector('#pixel-board');
 if (localStorage.getItem('pixelBoard') === null) {
   localStorage.setItem('pixelBoard', JSON.stringify([]));
 }
 const pixelsRows = [1, 2, 3, 4, 5];
+
+let isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+if (isDarkMode) {
+  htmlElement.classList.add('dark-mode');
+  checkbox.checked = true;
+}
+
+htmlElement.addEventListener('change', () => {
+  htmlElement.classList.toggle('dark-mode');
+
+  // Salva o estado atual no localStorage
+  isDarkMode = htmlElement.classList.contains('dark-mode');
+  localStorage.setItem('darkMode', isDarkMode);
+});
 
 // Define a cor de fundo da paleta
 colors.forEach((color) => {
