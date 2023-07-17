@@ -62,24 +62,32 @@ colors.forEach((selected) => {
 });
 
 // Coloca as cores nos pixels
-const coloredPixels = document.querySelectorAll('.pixel');
+const getPixels = () => {
+  const coloredPixels = document.querySelectorAll('.pixel');
+  return coloredPixels;
+};
+
 const savedColors = JSON.parse(localStorage.getItem('pixelBoard')) || []; // Salva as cores para usar no getColorsBack
 
-coloredPixels.forEach((pixel, index) => {
-  pixel.addEventListener('click', (event) => {
-    if (!selectedColor) return;
-    const eventTarget = event.target;
-    const backgroundElement = selectedColor.style.backgroundColor;
-    eventTarget.style.backgroundColor = backgroundElement;
+const giveColorToPixel = () => {
+  const coloredPixels = getPixels();
+  coloredPixels.forEach((pixel, index) => {
+    pixel.addEventListener('click', (event) => {
+      if (!selectedColor) return;
+      const eventTarget = event.target;
+      const backgroundElement = selectedColor.style.backgroundColor;
+      eventTarget.style.backgroundColor = backgroundElement;
 
-    const pixelsColors = {
-      color: pixel.style.backgroundColor,
-      index,
-    };
-    savedColors.push(pixelsColors);
-    localStorage.setItem('pixelBoard', JSON.stringify(savedColors));
+      const pixelsColors = {
+        color: pixel.style.backgroundColor,
+        index,
+      };
+      savedColors.push(pixelsColors);
+      localStorage.setItem('pixelBoard', JSON.stringify(savedColors));
+    });
   });
-});
+};
+giveColorToPixel();
 
 // Criando botão que resta o border
 const button = document.createElement('button');
@@ -90,6 +98,7 @@ const palette = document.querySelector('section');
 palette.appendChild(button);
 
 button.addEventListener('click', () => {
+  const coloredPixels = getPixels();
   coloredPixels.forEach((p) => {
     p.style.backgroundColor = 'white';
   });
@@ -116,16 +125,6 @@ buttonRandom.addEventListener('click', () => {
     square.style.backgroundColor = randomColors();
   });
 });
-
-// Recupera as cores do localStorage
-const getColorsBack = () => {
-  savedColors.forEach((getBack) => {
-    const pixel = coloredPixels[getBack.index];
-    pixel.style.backgroundColor = getBack.color;
-  });
-};
-
-window.onload = getColorsBack;
 
 // Input que muda o border
 const btnChangeBorder = document.querySelector('#generate-board');
@@ -161,4 +160,16 @@ btnChangeBorder.addEventListener('click', (event) => {
 
   createPixelsLine();
   fillPixelsLine();
+  giveColorToPixel();
 });
+
+// Recupera as cores do localStorage
+const getColorsBack = () => {
+  savedColors.forEach((getBack) => {
+    const coloredPixels = getPixels();
+    const pixel = coloredPixels[getBack.index];
+    pixel.style.backgroundColor = getBack.color;
+  });
+};
+
+window.onload = getColorsBack;
