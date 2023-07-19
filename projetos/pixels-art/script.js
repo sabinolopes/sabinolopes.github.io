@@ -150,10 +150,10 @@ const inputNumber = document.querySelector('#board-size');
 const countLines = () => {
   const inputValue = inputNumber.value;
   for (let count = 1; count <= inputValue; count += 1) {
-    if (!pixelsRows.includes(count)) {
-      pixelsRows.push(count);
-    } else if (count > 50) {
+    if (count > 50) {
       break;
+    } else if (!pixelsRows.includes(count)) {
+      pixelsRows.push(count);
     }
   }
 };

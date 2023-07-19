@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --bg-color: rgb(13, 50, 77);
+  --txt-color: rgb(0, 0, 0);
+}
+
+.dark-mode:root {
+  --bg-color: #333;
+  --txt-color: rgb(60, 195, 104);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: flex-start;
+}
+
+section {
+  background-color: white;
+  border-radius: 30px;
+  margin-top: 20vh;
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 97%;
+  min-height: 500px;
+  padding: 25px;
+}
+
+section header {
+  text-align: center;
+}
+
+button {
+  background-color: rgb(6, 174, 213);
+  color: white;
+  padding: 3px 7px;
+  font-weight: 600;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgb(24, 202, 241);
+  }
+}
+
+input {
+  border: 1px solid rgb(6, 174, 213);
+  padding: 3px;
+}
+
+ol {
+margin-left: 25px;
+margin-top: 20px;
+}
+
+.selected {
+  background-color: gray;
+}
+
+.completed {
+  text-decoration: line-through solid black;
+}
+
+#apaga-tudo {
+  margin-top: 10px;
+}
