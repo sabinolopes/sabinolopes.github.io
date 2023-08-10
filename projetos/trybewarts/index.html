@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <title>Trybewarts</title>
+</head>
+
+<body>
+  <header class="header">
+    <img src="images/trybewarts-header-logo.svg" alt="Trybewarts logo" class="trybewarts-header-logo" />
+    <h1 id="trybewarts-header-title">Trybewarts</h1>
+    <form class="trybewarts-login">
+      <input class='form-control' type="email" name="email" id="email" placeholder="Email" />
+      <input class='form-control' type="password" name="password" id="password" placeholder="Senha" />
+      <button class='btn btn-primary' type="button" id="login">Entrar</button>
+    </form>
+  </header>
+  <main>
+    <form id="evaluation-form">
+      <h2>Formulário de Avaliação</h2>
+      <div>
+        <input type="text" id="input-name" placeholder="Nome" />
+        <input type="text" id="input-lastname" placeholder="Sobrenome" />
+      </div>
+
+      <div>
+        <input type="email" id="input-email" placeholder="Email" />
+        <label>
+          Casa
+          <select name="house" id="house">
+            <option id="gitnoria-house" value="Gitnória">Gitnória</option>
+            <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
+            <option id="corvinode-house" value="Corvinode">Corvinode</option>
+            <option id="pytherina-house" value="Pytherina">Pytherina</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="check">
+        <label id="label-family">Qual sua família?</label>
+        <label><input type="radio" name="family" value="Frontend" />
+          Frontend</label>
+        <label><input type="radio" name="family" value="Backend" /> Backend</label>
+        <label><input type="radio" name="family" value="FullStack" checked />
+          FullStack</label>
+      </div>
+
+      <div class="check">
+        <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
+        <label><input type="checkbox" class="subject" value="Comunicação" />
+          Comunicação</label>
+        <label><input type="checkbox" class="subject" value="Trabalho em equipe" />
+          Trabalho em equipe</label>
+        <label><input type="checkbox" class="subject" value="Negociação" />
+          Negociação</label>
+        <label><input type="checkbox" class="subject" value="Escuta ativa" />
+          Escuta ativa</label>
+        <label><input type="checkbox" class="subject" value="Métodos de array" />
+          Métodos de array</label>
+        <label><input type="checkbox" class="subject" value="Jest" /> Jest</label>
+      </div>
+
+      <div class="check">
+        <label id="label-rate">Como você avalia a Trybewarts?</label>
+        <div>
+          <label><input type="radio" value="1" name="rate" />1</label>
+          <label><input type="radio" value="2" name="rate" />2</label>
+          <label><input type="radio" value="3" name="rate" />3</label>
+          <label><input type="radio" value="4" name="rate" />4</label>
+          <label><input type="radio" value="5" name="rate" />5</label>
+          <label><input type="radio" value="6" name="rate" />6</label>
+          <label><input type="radio" value="7" name="rate" />7</label>
+          <label><input type="radio" value="8" name="rate" />8</label>
+          <label><input type="radio" value="9" name="rate" />9</label>
+          <label><input type="radio" value="10" name="rate" checked />10</label>
+        </div>
+      </div>
+
+      <div class="check">
+        <label class="textarea">Descreva os principais pontos de aprendizado até aqui (1 hard skill / 1 soft skill):
+        </label>
+        <textarea id='textarea' name="learning" minlength="20" maxlength="500" cols="30" rows="10">Responda aqui sobre os pontos de aprendizado.
+        </textarea>
+        <p>Limite: <span id='counter'>500</span> caracteres</p>
+      </div>
+
+      <div>
+        <label id='label-infos'>
+          Você concorda com o uso das informações acima?
+          <input id='agreement' type="checkbox">
+        </label>
+      </div>
+
+      <div>
+        <button class='btn btn-success' id='submit-btn' type='submit' disabled>Enviar</button>
+      </div>
+
+    </form>
+    <img src="images/trybewarts-colored.svg" alt="Brasão Trybewarts" id="trybewarts-forms-logo" />
+  </main>
+  <footer>
+    Direitos reservados à Trybewarts©
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
